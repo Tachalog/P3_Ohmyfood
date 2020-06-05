@@ -1,0 +1,136 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0;
+  padding: 1px;
+  text-align: center;
+  background-color: #569c87;
+}
+
+main {
+  padding-bottom: 50px;
+}
+
+h1 a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 a:link, h1 a:visited {
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+h1 a:focus, h1 a:hover {
+  color: #569c87;
+  background-color: #fdcb46;
+}
+
+h1 a:active {
+  color: #fdcb46;
+}
+
+.s_title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 35px;
+  text-align: center;
+}
+
+main {
+  margin: 50px;
+  font-family: "Dancing Script", cursive;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  padding: 50px 20px 0;
+  margin: 30px 0;
+}
+
+h4 {
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.details_m {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 100px;
+      grid-template-columns: 1fr 100px;
+  margin: 0 100px;
+  font-size: 25px;
+  font-weight: lighter;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tarif .plat {
+  text-align: center;
+}
+
+.title_end {
+  padding-bottom: 50px;
+}
+
+.dessert {
+  margin: 100px;
+  font-size: 25px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+}
+
+h3 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  color: #fdcb46;
+  background-color: #569c87;
+  font-family: "Montserrat", sans-serif;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:link, footer a:visited {
+  color: #fdcb46;
+  text-decoration: none;
+}
+
+footer a:focus, footer a:hover {
+  color: #569c87;
+  background-color: #fdcb46;
+}
+
+footer a:active {
+  color: #fdcb46;
+}
+/*# sourceMappingURL=style_m3.css.map */
