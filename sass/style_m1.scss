@@ -1,42 +1,46 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+/* régle d'import des mixns */
+@import "mixins.scss";
+
+/*-------------------------*/
 
 body {
-  margin:0;
-  padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-$colorTitle:rgb(253, 203, 70);
-$colorBackTitle:rgb(86, 156, 135);
+/*----- variable à réutiliser-------------*/
+$colorTitle: rgb(253, 203, 70);
+$colorBackTitle: rgb(86, 156, 135);
 $font-sizeDetail: 25px;
-$m_menu:'Devonshire', cursive;
-$fontFamillyTitle:'Montserrat', sans-serif;
+$m_menu: "Devonshire", cursive;
+$fontFamillyTitle: "Montserrat", sans-serif;
 
-header{
-  top: 0;
-  padding: 1px;
-  text-align: center;
-  background-color: $colorBackTitle;
-}
+/*----------------------------------------*/
 
-main {
-  padding-bottom: 50px;
+header {
+    top: 0;
+    padding: 1px;
+    text-align: center;
+    background-color: $colorBackTitle;
 }
 
 h1 a {
-  text-decoration: none;
-  font-family: $fontFamillyTitle;
+    text-decoration: none;
+    font-family: $fontFamillyTitle;
 }
 
-h1 a:link, h1 a:visited{
-  color:$colorTitle;
-  text-decoration: none;
+h1 a:link, h1 a:visited {
+    color: $colorTitle;
+    text-decoration: none;
 }
 
-h1 a:focus, h1 a:hover{
-  color: $colorBackTitle;
-  background-color: $colorTitle;
+h1 a:focus, h1 a:hover {
+    color: $colorBackTitle;
+    background-color: $colorTitle;
 }
 
 h1 a:active {
@@ -44,88 +48,102 @@ h1 a:active {
 }
 
 .s_title {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 40px;
-  text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+    text-align: center;
 }
 
 main {
-  margin: 50px;
-  font-family: $m_menu;
-  background-color: #fcdfdb;
+    margin: 0 150px;
+    font-family: $m_menu;
+    background-color: #fcdfdb;
 }
 
 h2 {
-  font-size: 30px;
-  text-align: center;
-  font-family: $m_menu;
-  padding: 50px 20px 0;
-  margin: 30px 0;
+    font-size: 25px;
+    text-align: center;
+    font-family: $m_menu;
+    padding: 20px 20px 0;
 }
 
-h4 {
-  font-size:$font-sizeDetail;
-  font-weight: bold;
-  text-align: center;
-  font-family: 'Caveat', cursive;
+h4{
+    font-size: $font-sizeDetail;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    @include trait;
 }
 
 .details_m {
-  display:grid;
-  grid-template-columns: 1fr 100px;
-  margin: 0 100px;
-  font-size: $font-sizeDetail;
-  font-weight: lighter;
-  justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    margin: 0 100px;
+    font-size: $font-sizeDetail;
+    font-weight: lighter;
+    justify-content: space-between;
 }
 
-.tarif .plat {
-  text-align: center;
+.plat {
+    text-align: left;
+}
+
+.tarif{
+    text-align: right;
 }
 
 .dessert {
-  margin: 100px;
-  font-size: $font-sizeDetail;
+    margin: 0 100px;
+    font-size: $font-sizeDetail;
 }
 
 .title_end {
-  padding-bottom: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
 }
 
+/*----------zone bas de page-------------------*/
+/*----------animation wiggle -------------------*/
 footer {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  text-align: center;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 0;
-}
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    h3 {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 0;
 
-h3 {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 0;
-  color: $colorTitle;
-  background-color: $colorBackTitle;
-  font-family: $fontFamillyTitle;
-  justify-content: space-around;
+        @include style;
+    }
+        a {
+            text-decoration: none;
+            color: $colorTitle;
+        }
 }
-
+/*
 footer a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-footer a:link, footer a:visited{
-  color:$colorTitle;
-  text-decoration: none;
-}
-
-footer a:focus, footer a:hover{
-  color: $colorBackTitle;
-  background-color: $colorTitle;
-}
-
-footer a:active {
+footer a:link, footer a:visited, footer a:active {
     color: $colorTitle;
 }
+
+footer a:focus, footer a:hover {
+    color: $colorBackTitle;
+    background-color: $colorTitle;
+}
+*/
+.wiggle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.legacy:hover, .mail:hover {
+    -webkit-animation: wiggle 0.5s ease-in-out infinite;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@include transform;

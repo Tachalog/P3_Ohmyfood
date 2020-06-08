@@ -1,18 +1,18 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/*
-html {
-  height: 100%;
-}*/
+/* régle d'import des mixns */
+/*-------------------------*/
 body {
-  /*min-height: 100%;*/
   margin: 0;
   padding: 0;
 }
 
+/*------ variables à réutiliser -------*/
+/*------------------------------------*/
 header {
   top: 0;
   margin-bottom: 50px;
@@ -36,7 +36,7 @@ ul {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(70px, 600px);
+  grid-auto-rows: minmax(70px, 700px);
   -webkit-column-gap: 50px;
           column-gap: 50px;
   row-gap: 50px;
@@ -55,8 +55,19 @@ li {
 
 li a {
   text-decoration: none;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
+li p:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: 0.5;
+}
+
+/*------------- Partie menu ---------------*/
 .m1 {
   background-color: #fcdfdb;
   font-family: 'Devonshire', cursive;
@@ -121,7 +132,9 @@ li a {
   color: #42973c;
 }
 
-#button {
+/*---------------------------------------*/
+/*--------zone maintenant : avec animation des points de suspensions -------------*/
+.btn_next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,16 +151,50 @@ li a {
           justify-content: center;
 }
 
-#button .next {
+.btn_next .next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 50px;
   border-radius: 10px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
   color: #fdcb46;
   background-color: #569c87;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  width: 500px;
+  width: 400px;
 }
 
+.btn_next .next::after {
+  content: " ...";
+  overflow: hidden;
+  -webkit-animation: rundot 1.5s infinite;
+          animation: rundot 1.5s infinite;
+  display: inline-block;
+}
+
+@-webkit-keyframes rundot {
+  0% {
+    width: 0px;
+  }
+  20% {
+    width: 10px;
+  }
+  40% {
+    width: 20px;
+  }
+  60% {
+    width: 30px;
+  }
+  80% {
+    width: 40px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+/*----------zone bas de page-------------------*/
+/*----------animation wiggle -------------------*/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,17 +220,23 @@ footer h3 {
 
 footer a {
   text-decoration: none;
-}
-
-footer a:link, footer a:visited, footer a:active {
   color: #fdcb46;
 }
 
-footer a:focus, footer a:hover {
-  color: #569c87;
-  background-color: #fdcb46;
+/*
+footer a {
+    text-decoration: none;
 }
 
+footer a:link, footer a:visited, footer a:active {
+    color: $colorTitle;
+}
+
+footer a:focus, footer a:hover {
+    color: $colorBackTitle;
+    background-color: $colorTitle;
+}
+*/
 .wiggle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,53 +246,61 @@ footer a:focus, footer a:hover {
 }
 
 .legacy:hover, .mail:hover {
-  -webkit-animation: wiggle 0.5s infinite;
-          animation: wiggle 0.5s infinite;
+  -webkit-animation: wiggle 0.5s ease-in-out infinite;
+  animation: wiggle 0.5s ease-in-out infinite;
 }
 
 @-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
   20% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
   }
   40% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg);
   }
   60% {
-    -webkit-transform: translate(0px, -1px) rotate(0deg);
-            transform: translate(0px, -1px) rotate(0deg);
+    -webkit-transform: translate(1px, 0) rotate(0);
+            transform: translate(1px, 0) rotate(0);
   }
   80% {
-    -webkit-transform: translate(-1px, 0px) rotate(2deg);
-            transform: translate(-1px, 0px) rotate(2deg);
+    -webkit-transform: translate(-1px, 1px) rotate(1deg);
+            transform: translate(-1px, 1px) rotate(1deg);
   }
   100% {
-    -webkit-transform: translate(2px, 1px) rotate(-2deg);
-            transform: translate(2px, 1px) rotate(-2deg);
+    -webkit-transform: translate(0, 0) rotate(-1deg);
+            transform: translate(0, 0) rotate(-1deg);
   }
 }
 
 @keyframes wiggle {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
   20% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
   }
   40% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg);
   }
   60% {
-    -webkit-transform: translate(0px, -1px) rotate(0deg);
-            transform: translate(0px, -1px) rotate(0deg);
+    -webkit-transform: translate(1px, 0) rotate(0);
+            transform: translate(1px, 0) rotate(0);
   }
   80% {
-    -webkit-transform: translate(-1px, 0px) rotate(2deg);
-            transform: translate(-1px, 0px) rotate(2deg);
+    -webkit-transform: translate(-1px, 1px) rotate(1deg);
+            transform: translate(-1px, 1px) rotate(1deg);
   }
   100% {
-    -webkit-transform: translate(2px, 1px) rotate(-2deg);
-            transform: translate(2px, 1px) rotate(-2deg);
+    -webkit-transform: translate(0, 0) rotate(-1deg);
+            transform: translate(0, 0) rotate(-1deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
