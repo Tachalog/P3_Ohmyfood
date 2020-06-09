@@ -45,6 +45,12 @@ ul {
   padding-top: 30px;
 }
 
+ul li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.5;
+}
+
 li {
   list-style: none;
   text-align: center;
@@ -61,12 +67,11 @@ li a {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
+/*
 li p:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  opacity: 0.5;
-}
-
+    transform: scale(1.3);
+    opacity: 0.5;
+}*/
 /*------------- Partie menu ---------------*/
 .m1 {
   background-color: #fcdfdb;
@@ -98,6 +103,32 @@ li p:hover {
   color: #c77412;
 }
 
+/*------code pour dégradé de couleur sur le text du menu 2 ---------*/
+li.m2 .gradient {
+  display: inline-block;
+  position: relative;
+  color: black;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
+li.m2 .gradient::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#c77412), to(#905bfd));
+  background: linear-gradient(to right, #c77412, #905bfd);
+}
+
+li.m2 .gradient::before {
+  mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
 .m_Color {
   font-family: 'Kaushan Script', cursive;
 }
@@ -117,6 +148,32 @@ li p:hover {
   color: #0431df;
 }
 
+/*------code pour dégradé de couleur sur le text du menu 3 ---------*/
+li.m3 .gradient {
+  display: inline-block;
+  position: relative;
+  color: black;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
+li.m3 .gradient::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#0431df), to(#0887fb));
+  background: linear-gradient(to right, #0431df, #0887fb);
+}
+
+li.m3 .gradient::before {
+  mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
 .m4 {
   background-color: #fdfffd;
   font-family: 'Kaushan Script', cursive;
@@ -132,6 +189,32 @@ li p:hover {
   color: #42973c;
 }
 
+/*------code pour dégradé de couleur sur le text du menu 4 ---------*/
+li.m4 .gradient {
+  display: inline-block;
+  position: relative;
+  color: black;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
+li.m4 .gradient::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#42973c), to(#bfff7e));
+  background: linear-gradient(to right, #42973c, #bfff7e);
+}
+
+li.m4 .gradient::before {
+  mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
 /*---------------------------------------*/
 /*--------zone maintenant : avec animation des points de suspensions -------------*/
 .btn_next {
@@ -173,6 +256,27 @@ li p:hover {
 }
 
 @-webkit-keyframes rundot {
+  0% {
+    width: 0px;
+  }
+  20% {
+    width: 10px;
+  }
+  40% {
+    width: 20px;
+  }
+  60% {
+    width: 30px;
+  }
+  80% {
+    width: 40px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes rundot {
   0% {
     width: 0px;
   }

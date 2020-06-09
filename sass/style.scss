@@ -52,6 +52,11 @@ ul {
     padding-top: $paddingTop_menu;
 }
 
+ul li:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
 li {
     list-style: none;
     text-align: center;
@@ -64,10 +69,11 @@ li {
     }
 }
 
+/*
 li p:hover {
     transform: scale(1.3);
     opacity: 0.5;
-}
+}*/
 
 /*------------- Partie menu ---------------*/
 .m1 {
@@ -100,6 +106,32 @@ li p:hover {
     }
 }
 
+/*------code pour dégradé de couleur sur le text du menu 2 ---------*/
+li.m2 .gradient {
+    display: inline-block;
+    position: relative;
+    color: black;
+    background: #fff;
+    mix-blend-mode: multiply;
+}
+
+li.m2 .gradient::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #c77412, #905bfd);
+}
+
+li.m2 .gradient::before {
+    mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
+
 .m_Color {
     font-family: 'Kaushan Script', cursive;
 }
@@ -119,6 +151,33 @@ li p:hover {
     }
 }
 
+/*------code pour dégradé de couleur sur le text du menu 3 ---------*/
+
+li.m3 .gradient {
+    display: inline-block;
+    position: relative;
+    color: black;
+    background: #fff;
+    mix-blend-mode: multiply;
+}
+
+li.m3 .gradient::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #0431df, #0887fb);
+}
+
+li.m3 .gradient::before {
+    mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
+
 .m4 {
     background-color: rgb(253, 255, 253);
     font-family: 'Kaushan Script', cursive;
@@ -133,6 +192,33 @@ li p:hover {
         color: rgb(66, 151, 60);
     }
 }
+
+/*------code pour dégradé de couleur sur le text du menu 4 ---------*/
+
+li.m4 .gradient {
+    display: inline-block;
+    position: relative;
+    color: black;
+    background: #fff;
+    mix-blend-mode: multiply;
+}
+
+li.m4 .gradient::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #42973c, #bfff7e);
+}
+
+li.m4 .gradient::before {
+    mix-blend-mode: screen;
+}
+
+/*------------------------------------------------------------*/
 
 /*---------------------------------------*/
 
@@ -163,7 +249,7 @@ li p:hover {
     }
 }
 
-@-webkit-keyframes rundot {
+@keyframes rundot {
     0% {
         width: 0px;
     }
