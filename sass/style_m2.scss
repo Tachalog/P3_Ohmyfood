@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+@import "mixins.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*----- variable à réutiliser-------------*/
+$colorTitle: rgb(253, 203, 70);
+$colorBackTitle: rgb(86, 156, 135);
+$font-sizeDetail: 20px;
+$m_menu: "Libre Baskerville", serif;
+$fontFamillyTitle: "Montserrat", sans-serif;
+
+/*----------------------------------------*/
+
+header {
+    top: 0;
+    padding: 1px;
+    text-align: center;
+    background-color: $colorBackTitle;
+}
+
+h1 a {
+    text-decoration: none;
+    font-family: $fontFamillyTitle;
+}
+
+h1 a:link, h1 a:visited {
+    color: $colorTitle;
+    text-decoration: none;
+}
+
+h1 a:focus, h1 a:hover {
+    color: $colorBackTitle;
+    background-color: $colorTitle;
+}
+
+h1 a:active {
+    color: $colorTitle;
+}
+
+.s_title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+    text-align: center;
+}
+
+main {
+    margin: 0 150px;
+    font-family: $m_menu;
+    background-color: #fcdfdb;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    font-family: $m_menu;
+    padding: 20px 20px 0;
+}
+
+.container {
+    font-size: 20px;
+    font-weight: bold;
+    width: auto;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    white-space: nowrap;
+}
+
+h4 {
+    display: inline;
+    padding: 0 10px;
+}
+
+.trait:before, .trait:after {
+    content: "";
+    border-top: 2px solid black;
+    width: 25%;
+    padding: 0 40px;
+    margin: 0 10px;
+    display: inline-flex;
+}
+
+.underline {
+    color: inherit;
+    text-decoration: none;
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 5%, transparent 1%) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .5s;
+}
+
+.underline:hover {
+    background-size: 100% 100%;
+}
+
+.details_m {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    margin: 0 100px;
+    padding: 10px 10px 30px 10px;
+    font-size: $font-sizeDetail;
+    font-weight: lighter;
+    justify-content: space-between;
+}
+
+.plat {
+    text-align: left;
+}
+
+.tarif {
+    text-align: right;
+}
+
+.dessert {
+    margin: 100px;
+    font-size: $font-sizeDetail;
+}
+
+.title_end {
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+/*----------zone bas de page-------------------*/
+/*----------animation wiggle -------------------*/
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+
+    h3 {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 0;
+
+        @include style;
+    }
+
+    a {
+        text-decoration: none;
+        color: $colorTitle;
+    }
+}
+
+/*
+footer a {
+    text-decoration: none;
+}
+
+footer a:link, footer a:visited, footer a:active {
+    color: $colorTitle;
+}
+
+footer a:focus, footer a:hover {
+    color: $colorBackTitle;
+    background-color: $colorTitle;
+}
+*/
+.wiggle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.legacy:hover, .mail:hover {
+    -webkit-animation: wiggle 0.5s ease-in-out infinite;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@include transform;

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*min-height: 100%;*/
+  margin :0;
+  padding: 0;
+}
+
+$colorTitle:rgb(253, 203, 70);
+$colorBackTitle:rgb(86, 156, 135);
+$paddingTop_menu : 130px;
+$font-size_menu: 40px;
+$m_menu:'Balsamiq Sans', cursive;
+$fontFamillyTitle:'Montserrat', sans-serif;
+
+
+header {
+  top: 0;
+  margin-bottom: 50px;
+  padding:5px;
+  text-align: center;
+  font-size: 20px;
+  background-color: rgb(86, 156, 135);
+}
+
+h1 a {
+  text-decoration: none;
+  font-family: $fontFamillyTitle;
+}
+
+h1 a:link, h1 a:visited{
+  color:$colorTitle;
+  text-decoration: none;
+}
+
+h1 a:focus, h1 a:hover{
+  color: $colorBackTitle;
+  background-color: $colorTitle;
+}
+
+h1 a:active {
+    color: $colorTitle;
+}
+
+h2 {
+  color: $colorTitle;
+  font-family: $fontFamillyTitle;
+  margin:10px;
+  padding: 10px;
+}
+
+h4, li {
+  list-style: none;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  border-radius: 50%;
+}
+
+h3 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  color: $colorTitle;
+  background-color: $colorBackTitle;
+  font-family: $fontFamillyTitle;
+  justify-content: space-around;
+
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:link, footer a:visited{
+  color:$colorTitle;
+  text-decoration: none;
+}
+
+footer a:focus, footer a:hover{
+  color: $colorBackTitle;
+  background-color: $colorTitle;
+}
+
+footer a:active {
+    color: $colorTitle;
+}

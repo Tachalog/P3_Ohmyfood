@@ -1,0 +1,48 @@
+@mixin transform {
+    @keyframes wiggle {
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+
+        20% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+
+        40% {
+            transform: translate(2px, 1px) rotate(-1deg);
+        }
+
+        60% {
+            transform: translate(1px, 0) rotate(0);
+        }
+
+        80% {
+            transform: translate(-1px, 1px) rotate(1deg);
+        }
+
+        100% {
+            transform: translate(0, 0) rotate(-1deg);
+        }
+    }
+}
+
+@mixin menuStyle {
+    font-size: $font-size_menu;
+    padding-top: $paddingTopDetails;
+}
+
+@mixin style {
+    color: $colorTitle;
+    background-color: $colorBackTitle;
+    font-family: $fontFamillyTitle;
+}
+
+@mixin trait {
+    section h4:before, section h4:after {
+        content: "";
+        border-top: 2px solid black;
+        width: 50%;
+        display: inline;
+        margin: 20px 100px;
+    }
+}
