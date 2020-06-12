@@ -15,7 +15,7 @@ body {
 /*----- variable à réutiliser-------------*/
 $colorTitle: rgb(253, 203, 70);
 $colorBackTitle: rgb(86, 156, 135);
-$font-sizeDetail: 25px;
+$font-sizeDetail: 20px;
 $m_menu: "Dancing Script", cursive;
 $fontFamillyTitle: "Montserrat", sans-serif;
 
@@ -84,13 +84,13 @@ h4 {
 .trait:before, .trait:after {
     content: "";
     border-top: 2px solid black;
-    width: 30%;
+    width: 25%;
     padding: 0 40px;
     margin: 0 10px;
     display: inline-flex;
 }
 
-h4 > a {
+.underline {
     color: inherit;
     text-decoration: none;
     background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 5%, transparent 1%) no-repeat;
@@ -98,16 +98,15 @@ h4 > a {
     transition: background-size .5s;
 }
 
-h4 > a:hover {
+.underline:hover {
     background-size: 100% 100%;
-
-    /*animation: underline 0.5s ease-in-out;*/
 }
 
 .details_m {
     display: grid;
     grid-template-columns: 1fr 100px;
     margin: 0 100px;
+    padding: 10px 10px 30px 10px;
     font-size: $font-sizeDetail;
     font-weight: lighter;
     justify-content: space-between;

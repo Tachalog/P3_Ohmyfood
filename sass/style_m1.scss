@@ -15,7 +15,7 @@ body {
 /*----- variable à réutiliser-------------*/
 $colorTitle: rgb(253, 203, 70);
 $colorBackTitle: rgb(86, 156, 135);
-$font-sizeDetail: 25px;
+$font-sizeDetail: 20px;
 $m_menu: "Devonshire", cursive;
 $fontFamillyTitle: "Montserrat", sans-serif;
 
@@ -65,6 +65,10 @@ h2 {
     font-family: $m_menu;
     padding: 20px 20px 0;
 }
+.fa-music {
+    
+}
+
 
 .container {
     font-size: 20px;
@@ -75,7 +79,8 @@ h2 {
     font-family: 'Caveat', cursive;
     white-space: nowrap;
 }
-h4{
+
+h4 {
     display: inline;
     padding: 0 10px;
 }
@@ -89,24 +94,23 @@ h4{
     display: inline-flex;
 }
 
-
-h4>a {
+.underline {
     color: inherit;
     text-decoration: none;
-    background: linear-gradient(to top, rgb(0,0,0) 0%, rgb(0,0,0) 5%, transparent 1%) no-repeat;
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 5%, transparent 1%) no-repeat;
     background-size: 0 100%;
     transition: background-size .5s;
 }
 
-h4>a:hover {
+.underline:hover {
     background-size: 100% 100%;
-    /*animation: underline 0.5s ease-in-out;*/
 }
 
 .details_m {
     display: grid;
     grid-template-columns: 1fr 100px;
     margin: 0 100px;
+    padding: 10px 10px 30px 10px;
     font-size: $font-sizeDetail;
     font-weight: lighter;
     justify-content: space-between;
@@ -116,7 +120,7 @@ h4>a:hover {
     text-align: left;
 }
 
-.tarif{
+.tarif {
     text-align: right;
 }
 
@@ -139,6 +143,7 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
+
     h3 {
         width: 100%;
         padding: 20px;
@@ -146,11 +151,13 @@ footer {
 
         @include style;
     }
-        a {
-            text-decoration: none;
-            color: $colorTitle;
-        }
+
+    a {
+        text-decoration: none;
+        color: $colorTitle;
+    }
 }
+
 /*
 footer a {
     text-decoration: none;
