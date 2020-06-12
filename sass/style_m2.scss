@@ -63,13 +63,42 @@ h2 {
     padding: 20px 20px 0;
 }
 
-h4 {
-    font-size: $font-sizeDetail;
+.container {
+    font-size: 20px;
     font-weight: bold;
+    width: auto;
+    justify-content: center;
     text-align: center;
     font-family: 'Caveat', cursive;
+    white-space: nowrap;
+}
 
-    @include trait;
+h4 {
+    display: inline;
+    padding: 0 10px;
+}
+
+.trait:before, .trait:after {
+    content: "";
+    border-top: 2px solid black;
+    width: 30%;
+    padding: 0 40px;
+    margin: 0 10px;
+    display: inline-flex;
+}
+
+h4 > a {
+    color: inherit;
+    text-decoration: none;
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 5%, transparent 1%) no-repeat;
+    background-size: 0 100%;
+    transition: background-size .5s;
+}
+
+h4 > a:hover {
+    background-size: 100% 100%;
+
+    /*animation: underline 0.5s ease-in-out;*/
 }
 
 .details_m {
