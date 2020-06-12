@@ -88,6 +88,32 @@ li p:hover {
   color: #3c1218;
 }
 
+/*------code pour dégradé de couleur sur la note de musique du menu 1 ---------*/
+li.m1 .gradient {
+  font-size: 150%;
+  display: inline-block;
+  position: relative;
+  color: black;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
+li.m1 .gradient:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f15861), to(#f78f6a));
+  background-image: linear-gradient(to right, #f15861, #f78f6a);
+}
+
+li.m1 .gradient:before {
+  mix-blend-mode: screen;
+}
+
 /*------------- Menu 2 ---------------*/
 .m2 {
   background-color: #fff5fe;
@@ -193,6 +219,7 @@ li.m3 .gradient::before {
 /*------code pour dégradé de couleur sur le text du menu 4 ---------*/
 li.m4 .gradient {
   display: inline-block;
+  font-size: 19px;
   position: relative;
   color: black;
   background: #fff;

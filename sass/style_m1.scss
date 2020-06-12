@@ -59,6 +59,33 @@ main {
     background-color: #fcdfdb;
 }
 
+/**************** couleur en dégradé pour la note de musique ***********/
+h2 .gradient{
+    font-size:160%;
+    display: inline-block;
+    position: relative;
+    color: black;
+    background: #fff;
+    mix-blend-mode: multiply;
+}
+
+h2 .gradient:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, rgb(241,88,97), rgb(247,143,106));
+}
+
+h2 .gradient:before {
+    mix-blend-mode: screen;
+}
+
+/***********************************************************************/
+
 h2 {
     font-size: 25px;
     text-align: center;
