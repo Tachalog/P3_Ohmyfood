@@ -242,7 +242,7 @@ li.m4 .gradient::before {
 
 /*---------------------------------------*/
 
-/*--------Section prochainement: avec animation des points de suspensions -------------*/
+/*--------Section prochainement: animation des points de suspensions -------------*/
 .btn_next {
     display: flex;
     flex-direction: row;
@@ -319,20 +319,6 @@ footer {
     }
 }
 
-/*
-footer a {
-    text-decoration: none;
-}
-
-footer a:link, footer a:visited, footer a:active {
-    color: $colorTitle;
-}
-
-footer a:focus, footer a:hover {
-    color: $colorBackTitle;
-    background-color: $colorTitle;
-}
-*/
 .wiggle {
     display: flex;
     justify-content: space-around;
@@ -345,35 +331,58 @@ footer a:focus, footer a:hover {
 
 @include transform;
 
-/*------- Partie responsive --------------------*/
+/*--------------------------
+Partie responsive
+-----------------------------*/
 
 @media all and (max-width: 768px) {
+    header {
+        margin-bottom: 30px;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
         padding: 0;
-        margin: 0 30px;
+        margin: 0 20px;
     }
 
-    .m1, .m2, .m3, .m4 {
+    .m1 {
         font-size: 15px;
     }
 
-    li.m1 {
+    .m2 {
+        font-size: 15px;
+    }
+
+    .m3 {
+        font-size: 15px;
+    }
+
+    .m4 {
+        font-size: 15px;
+    }
+
+    li.m1, li.m2, li.m3, li.m4 {
         padding-top: 30px;
+        margin: 20px;
     }
 
-    .btn_next .next {
-        padding: 0 20px;
-        font-size: 15px;
-        width: 60%;
+    .btn_next {
         justify-content: center;
-        padding: 20px;
-    }
+        text-align: center;
+        
+        .next {
+            padding: 0 20px;
+            font-size: 15px;
 
-    .next::after {
-        animation-play-state: paused;
-        content: none;
+            width: 45%;
+
+            &::after {
+                animation-play-state: paused;
+                content: none;
+            }
+        }
     }
 
     footer {

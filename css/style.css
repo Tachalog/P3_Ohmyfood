@@ -249,7 +249,7 @@ li.m4 .gradient::before {
 
 /*------------------------------------------------------------*/
 /*---------------------------------------*/
-/*--------Section prochainement: avec animation des points de suspensions -------------*/
+/*--------Section prochainement: animation des points de suspensions -------------*/
 .btn_next {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,20 +360,6 @@ footer a {
   color: #fdcb46;
 }
 
-/*
-footer a {
-    text-decoration: none;
-}
-
-footer a:link, footer a:visited, footer a:active {
-    color: $colorTitle;
-}
-
-footer a:focus, footer a:hover {
-    color: $colorBackTitle;
-    background-color: $colorTitle;
-}
-*/
 .wiggle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,8 +427,13 @@ footer a:focus, footer a:hover {
   }
 }
 
-/*------- Partie responsive --------------------*/
+/*--------------------------
+Partie responsive
+-----------------------------*/
 @media all and (max-width: 768px) {
+  header {
+    margin-bottom: 30px;
+  }
   ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -452,24 +443,36 @@ footer a:focus, footer a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
-    margin: 0 30px;
+    margin: 0 20px;
   }
-  .m1, .m2, .m3, .m4 {
+  .m1 {
     font-size: 15px;
   }
-  li.m1 {
+  .m2 {
+    font-size: 15px;
+  }
+  .m3 {
+    font-size: 15px;
+  }
+  .m4 {
+    font-size: 15px;
+  }
+  li.m1, li.m2, li.m3, li.m4 {
     padding-top: 30px;
+    margin: 20px;
+  }
+  .btn_next {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
   .btn_next .next {
     padding: 0 20px;
     font-size: 15px;
-    width: 60%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 20px;
+    width: 45%;
   }
-  .next::after {
+  .btn_next .next::after {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
     content: none;

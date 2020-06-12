@@ -5,6 +5,17 @@
 }
 
 /* régle d'import des mixns */
+/*
+@mixin trait {
+    section h4:before, section h4:after {
+        content: "";
+        border-top: 2px solid black;
+        width: 50%;
+        display: inline;
+        margin: 20px 100px;
+    }
+}
+*/
 /*-------------------------*/
 body {
   margin: 0;
