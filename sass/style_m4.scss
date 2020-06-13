@@ -10,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 /*----- variable à réutiliser-------------*/
@@ -69,7 +70,7 @@ h2 {
 .container {
     font-size: 20px;
     font-weight: bold;
-    width: auto;
+    width: 100%;
     justify-content: center;
     text-align: center;
     font-family: 'Caveat', cursive;
@@ -81,12 +82,17 @@ h4 {
     padding: 0 10px;
 }
 
+.trait {
+    display: inline-flex;
+    width: 90%;
+}
+
 .trait:before, .trait:after {
     content: "";
     border-top: 2px solid black;
-    width: 30%;
-    padding: 0 40px;
-    margin: 0 10px;
+    width: 100%;
+    padding: 0 50px;
+    margin:15px 10px 0 10px;
     display: inline-flex;
 }
 
