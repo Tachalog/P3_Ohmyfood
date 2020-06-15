@@ -51,7 +51,7 @@ h1 a:active {
 
 .s_title {
   font-family: 'Roboto Mono', monospace;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -62,14 +62,14 @@ main {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
   font-family: "Libre Baskerville", serif;
   padding: 20px 20px 0;
 }
 
 .container {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   width: 100%;
   -webkit-box-pack: center;
@@ -89,7 +89,7 @@ h4 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 90%;
+  width: 100%;
 }
 
 .trait:before, .trait:after {
@@ -124,7 +124,7 @@ h4 {
       grid-template-columns: 1fr 100px;
   margin: 0 100px;
   padding: 10px 10px 30px 10px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: lighter;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -141,7 +141,7 @@ h4 {
 
 .dessert {
   margin: 100px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .title_end {
@@ -257,6 +257,49 @@ footer a:focus, footer a:hover {
   100% {
     -webkit-transform: translate(0, 0) rotate(-1deg);
             transform: translate(0, 0) rotate(-1deg);
+  }
+}
+
+/*--------Responsive -------------------*/
+@media all and (max-width: 768px) {
+  main {
+    margin: 0 10px;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .details_m {
+    -ms-grid-columns: 1fr 50px;
+        grid-template-columns: 1fr 50px;
+    margin: 0;
+  }
+  .trait {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .trait:before, .trait:after {
+    padding: 0 15px;
+    margin: 15px 10px 0 10px;
+  }
+  .dessert {
+    margin: 0;
+    padding: 10px 10px 30px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style_m2.css.map */

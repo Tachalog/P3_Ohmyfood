@@ -13,7 +13,7 @@ body {
 /*----- variable à réutiliser-------------*/
 $colorTitle: rgb(253, 203, 70);
 $colorBackTitle: rgb(86, 156, 135);
-$font-sizeDetail: 20px;
+$font-sizeDetail: 15px;
 $m_menu: "Libre Baskerville", serif;
 $fontFamillyTitle: "Montserrat", sans-serif;
 
@@ -47,7 +47,7 @@ h1 a:active {
 
 .s_title {
     font-family: 'Roboto Mono', monospace;
-    font-size: 30px;
+    font-size: $font-sizeDetail;
     text-align: center;
 }
 
@@ -58,14 +58,14 @@ main {
 }
 
 h2 {
-    font-size: 25px;
+    font-size: $font-sizeDetail;
     text-align: center;
     font-family: $m_menu;
     padding: 20px 20px 0;
 }
 
 .container {
-    font-size: 20px;
+    font-size: $font-sizeDetail;
     font-weight: bold;
     width: 100%;
     justify-content: center;
@@ -81,7 +81,7 @@ h4 {
 
 .trait {
     display: inline-flex;
-    width: 90%;
+    width: 100%;
 }
 
 .trait:before, .trait:after {
@@ -89,7 +89,7 @@ h4 {
     border-top: 2px solid black;
     width: 100%;
     padding: 0 50px;
-    margin:15px 10px 0 10px;
+    margin: 15px 10px 0 10px;
     display: inline-flex;
 }
 
@@ -182,3 +182,42 @@ footer a:focus, footer a:hover {
 }
 
 @include transform;
+
+/*--------Responsive -------------------*/
+@media all and (max-width: 768px) {
+    $font-sizeDetail: 15px;
+
+    main {
+        margin: 0 10px;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    h4 {
+        display: flex;
+        padding: 0;
+    }
+
+    .details_m {
+        grid-template-columns: 1fr 50px;
+        margin: 0;
+    }
+
+    .trait {
+        display: inline-flex;
+    }
+
+    .trait:before, .trait:after {
+        padding: 0 15px;
+        margin: 15px 10px 0 10px;
+    }
+
+    .dessert {
+        margin: 0;
+        padding: 10px 10px 30px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}

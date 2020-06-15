@@ -256,4 +256,46 @@ footer a:focus, footer a:hover {
             transform: translate(0, 0) rotate(-1deg);
   }
 }
+
+/*--------Responsive -------------------*/
+@media all and (max-width: 768px) {
+  main {
+    margin: 0 10px;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .details_m {
+    -ms-grid-columns: 1fr 50px;
+        grid-template-columns: 1fr 50px;
+    margin: 0;
+  }
+  .trait {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .trait:before, .trait:after {
+    padding: 0 15px;
+    margin: 15px 10px 0 10px;
+  }
+  .dessert {
+    margin: 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 /*# sourceMappingURL=style_m4.css.map */

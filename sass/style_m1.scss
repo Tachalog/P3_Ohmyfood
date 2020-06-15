@@ -13,7 +13,7 @@ body {
     width: 100%;
 }
 
-/*----- variable à réutiliser-------------*/
+/*----- variable à réutiliser--------------*/
 $colorTitle: rgb(253, 203, 70);
 $colorBackTitle: rgb(86, 156, 135);
 $font-sizeDetail: 20px;
@@ -111,7 +111,7 @@ h4 {
 
 .trait {
     display: inline-flex;
-    width: 90%;
+    width: 100%;
 }
 
 .trait:before, .trait:after {
@@ -213,8 +213,12 @@ footer a:focus, footer a:hover {
 
 @include transform;
 
-/*--------Responsive ------------------*/
+/*--------Responsive -------------------*/
 @media all and (max-width: 768px) {
+    main {
+        margin: 0 10px;
+    }
+
     .container {
         display: flex;
     }
@@ -236,5 +240,11 @@ footer a:focus, footer a:hover {
     .trait:before, .trait:after {
         padding: 0 15px;
         margin: 15px 10px 0 10px;
+    }
+
+    .dessert {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
     }
 }

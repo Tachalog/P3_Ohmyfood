@@ -180,3 +180,39 @@ footer a:focus, footer a:hover {
 }
 
 @include transform;
+
+/*--------Responsive -------------------*/
+@media all and (max-width: 768px) {
+    main {
+        margin: 0 10px;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    h4 {
+        display: flex;
+        padding: 0;
+    }
+
+    .details_m {
+        grid-template-columns: 1fr 50px;
+        margin: 0;
+    }
+
+    .trait {
+        display: inline-flex;
+    }
+
+    .trait:before, .trait:after {
+        padding: 0 15px;
+        margin: 15px 10px 0 10px;
+    }
+
+    .dessert {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+    }
+}

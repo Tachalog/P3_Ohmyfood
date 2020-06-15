@@ -296,34 +296,25 @@ li.m4 .gradient::before {
 /*----------zone bas de page-------------------*/
 /*----------animation wiggle -------------------*/
 footer {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0;
 
-    h3 {
-        width: 100%;
-        padding: 20px;
-        margin-bottom: 0;
-
-        @include style;
-    }
-
-    a {
-        text-decoration: none;
-        color: $colorTitle;
-    }
+    @include style;
 }
 
-.wiggle {
+.wiggle2 {
     display: flex;
     justify-content: space-around;
 }
 
+a {
+    text-decoration: none;
+    color: $colorTitle;
+}
+
 .legacy:hover, .mail:hover {
-    -webkit-animation: wiggle 0.5s ease-in-out infinite;
     animation: wiggle 0.5s ease-in-out infinite;
 }
 
@@ -369,17 +360,16 @@ Partie responsive
     .btn_next {
         justify-content: center;
         text-align: center;
-        
+
         .next {
             padding: 0 20px;
             font-size: 15px;
+            width: 50%;
 
-            width: 45%;
-
-            &::after {
+            /*&::after {
                 animation-play-state: paused;
                 content: none;
-            }
+            }*/
         }
     }
 
@@ -394,9 +384,5 @@ Partie responsive
         padding: 10px;
         font-size: 15px;
         margin-top: 0px;
-    }
-
-    .legacy:hover, .mail:hover {
-        animation-play-state: paused;
     }
 }
