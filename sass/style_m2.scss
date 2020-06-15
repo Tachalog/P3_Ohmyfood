@@ -81,7 +81,7 @@ h4 {
 
 .trait {
     display: inline-flex;
-    width: 100%;
+    width: 90%;
 }
 
 .trait:before, .trait:after {
@@ -133,55 +133,9 @@ h4 {
     margin-bottom: 100px;
 }
 
-/*----------zone bas de page-------------------*/
-/*----------animation wiggle -------------------*/
-footer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+/*----------zone bas de page--- et ----animation wiggle -------------------*/
 
-    h3 {
-        width: 100%;
-        padding: 20px;
-        margin-bottom: 0;
-
-        @include style;
-    }
-
-    a {
-        text-decoration: none;
-        color: $colorTitle;
-    }
-}
-
-/*
-footer a {
-    text-decoration: none;
-}
-
-footer a:link, footer a:visited, footer a:active {
-    color: $colorTitle;
-}
-
-footer a:focus, footer a:hover {
-    color: $colorBackTitle;
-    background-color: $colorTitle;
-}
-*/
-.wiggle {
-    display: flex;
-    justify-content: space-around;
-}
-
-.legacy:hover, .mail:hover {
-    -webkit-animation: wiggle 0.5s ease-in-out infinite;
-    animation: wiggle 0.5s ease-in-out infinite;
-}
-
-@include transform;
+@include footer_wiggle;
 
 /*--------Responsive -------------------*/
 @media all and (max-width: 768px) {

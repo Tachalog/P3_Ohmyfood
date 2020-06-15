@@ -36,6 +36,7 @@
     background-color: $colorBackTitle;
     font-family: $fontFamillyTitle;
 }
+
 /*
 @mixin trait {
     section h4:before, section h4:after {
@@ -47,3 +48,31 @@
     }
 }
 */
+
+
+@mixin footer_wiggle {
+footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+
+    @include style;
+}
+
+.wiggle2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: $colorTitle;
+}
+
+.legacy:hover, .mail:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@include transform;
+}
