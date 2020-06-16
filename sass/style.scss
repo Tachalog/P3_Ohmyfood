@@ -52,8 +52,8 @@ ul {
     padding-top: $paddingTop_menu;
 }
 
-ul li:hover {
-    transform: scale(1.1);
+p:hover {
+    transform: scale(1.5);
     opacity: 0.5;
 }
 
@@ -65,9 +65,11 @@ li {
 
     a {
         text-decoration: none;
+
         transition: transform 0.5s;
     }
 }
+
 
 /*------------- Menu 1 ---------------*/
 .m1 {

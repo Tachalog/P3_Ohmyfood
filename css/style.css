@@ -56,9 +56,9 @@ ul {
   padding-top: 30px;
 }
 
-ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+p:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 0.5;
 }
 
