@@ -270,7 +270,7 @@ après le texte prochainement-----*/
   background-color: #569c87;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  width: 40%;
+  width: 50%;
 }
 
 .btn_next .next::after {
@@ -456,6 +456,10 @@ Partie responsive
     padding: 0 20px;
     font-size: 15px;
     width: 50%;
+    /*&::after {
+                animation-play-state: paused;
+                content: none;
+            }*/
   }
   footer {
     background-color: #569c87;
