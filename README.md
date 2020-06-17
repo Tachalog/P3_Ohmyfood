@@ -1,2 +1,2 @@
-"# projet3OC" 
-Projet OpenClassrooms sur le projet 3 "OHYMYFOOD" 
+Projet3 "Ohymyfood" d'OpenClassroom" 
+Mise à disposition des fichiers du projet
