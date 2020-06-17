@@ -56,7 +56,7 @@ ul {
   padding-top: 30px;
 }
 
-p:hover {
+ul p:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   opacity: 0.5;
@@ -239,8 +239,9 @@ li.m4 .gradient::before {
   mix-blend-mode: screen;
 }
 
-/*------------------------------------------------------------*/
-/*--------Section prochainement: animation des points de suspensions -------------*/
+/*---------Zone bas de page--------------------------*/
+/*--------Section prochainement: animation des points de suspensions 
+après le texte prochainement-----*/
 .btn_next {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,6 +257,7 @@ li.m4 .gradient::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .btn_next .next {
@@ -268,7 +270,7 @@ li.m4 .gradient::before {
   background-color: #569c87;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  width: 30%;
+  width: 50%;
 }
 
 .btn_next .next::after {
@@ -443,6 +445,7 @@ Partie responsive
     padding-top: 30px;
     margin: 20px;
   }
+  /*------------ section prochainement-----------------*/
   .btn_next {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

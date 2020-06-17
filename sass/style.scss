@@ -50,11 +50,11 @@ ul {
     padding: 0 100px;
     margin: 20px 50px;
     padding-top: $paddingTop_menu;
-}
 
-p:hover {
-    transform: scale(1.3);
-    opacity: 0.5;
+    p:hover {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
 }
 
 li {
@@ -227,18 +227,21 @@ li.m4 .gradient::before {
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, #42973c, #bfff7e);
-     mix-blend-mode: screen;
+    mix-blend-mode: screen;
 }
 
-/*------------------------------------------------------------*/
+/*---------Zone bas de page--------------------------*/
 
-/*--------Section prochainement: animation des points de suspensions -------------*/
+/*--------Section prochainement: animation des points de suspensions 
+après le texte prochainement-----*/
+
 .btn_next {
     display: flex;
     flex-direction: row;
     height: auto;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     .next {
         display: flex;
@@ -248,7 +251,7 @@ li.m4 .gradient::before {
         background-color: #569c87;
         font-family: "Montserrat", sans-serif;
         font-size: 30px;
-        width: 30%;
+        width: 50%;
 
         &::after {
             content: " ...";
@@ -327,10 +330,11 @@ Partie responsive
         margin: 20px;
     }
 
+    /*------------ section prochainement-----------------*/
     .btn_next {
         justify-content: center;
         text-align: center;
-
+       
         .next {
             padding: 0 20px;
             font-size: 15px;
