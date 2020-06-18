@@ -257,6 +257,7 @@ après le texte prochainement-----*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .btn_next .next {

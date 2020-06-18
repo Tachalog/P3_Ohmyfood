@@ -241,6 +241,7 @@ après le texte prochainement-----*/
     height: auto;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     .next {
         display: flex;
@@ -250,6 +251,7 @@ après le texte prochainement-----*/
         background-color: #569c87;
         font-family: "Montserrat", sans-serif;
         font-size: 30px;
+
         width: 40%;
 
         &::after {
@@ -333,7 +335,7 @@ Partie responsive
     .btn_next {
         justify-content: center;
         text-align: center;
-
+       
         .next {
             padding: 0 20px;
             font-size: 15px;
