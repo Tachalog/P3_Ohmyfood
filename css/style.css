@@ -94,7 +94,7 @@ li a {
   color: #3c1218;
 }
 
-/*------code pour dégradé de couleur sur la note de musique du menu 1 ---------*/
+/*------code pour dégradé de couleur sur le texte du menu 1 ---------*/
 li.m1 .gradient {
   font-size: 151%;
   display: inline-block;
@@ -430,7 +430,7 @@ Partie responsive
     padding-top: 200px;
   }
   .m2 {
-    font-size: 10px;
+    font-size: 15px;
     padding-top: 200px;
   }
   .m3 {

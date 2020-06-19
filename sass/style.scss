@@ -63,7 +63,7 @@ li {
     box-shadow: rgba(189, 189, 189, 1) 5px 0px 20px;
     padding-top: 50px;
 
-    a {
+   a {
         text-decoration: none;
         transition: transform 0.5s;
     }
@@ -85,7 +85,7 @@ li {
     }
 }
 
-/*------code pour dégradé de couleur sur la note de musique du menu 1 ---------*/
+/*------code pour dégradé de couleur sur le texte du menu 1 ---------*/
 li.m1 .gradient {
     font-size: 151%;
     display: inline-block;
@@ -315,7 +315,7 @@ Partie responsive
     }
 
     .m2 {
-        @include menuStyle(10px);
+        @include menuStyle(15px);
     }
 
     .m3 {

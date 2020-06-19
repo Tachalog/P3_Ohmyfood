@@ -92,7 +92,7 @@ h4 {
     border-top: 2px solid black;
     width: 100%;
     padding: 0 50px;
-    margin:15px 10px 0 10px;
+    margin: 15px 10px 0 10px;
     display: inline-flex;
 }
 
@@ -139,6 +139,24 @@ h4 {
 
 /*--------Responsive -------------------*/
 @media all and (max-width: 768px) {
+    .details_m {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plat {
+        text-align: center;
+    }
+
+    .tarif {
+        text-align: center;
+    }
+
+    .dessert {
+        text-align: center;
+    }
+
     main {
         margin: 0 10px;
     }
